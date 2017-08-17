@@ -71,11 +71,11 @@ namespace lesson1608
         {
             get
             {
-                return _array[i + Math.Abs(Start)];
+                return _array[Math.Abs(i) - Math.Abs(Start)];
             }
             set
             {
-                _array[i + Math.Abs(Start)] = value;
+                _array[Math.Abs(i) - Math.Abs(Start)] = value; //-6 -5 -4 -3 -2 -1 0 1 2 34 5 6 7 8
             }
         }
         #endregion
@@ -83,7 +83,7 @@ namespace lesson1608
         #region Methods
 
         private int GetRealPosition(int position)
-        { return position + Math.Abs(Start); }
+        { return Math.Abs(position) - Math.Abs(Start); }
         private void SwapIndices()
         {
             int temp = Start;

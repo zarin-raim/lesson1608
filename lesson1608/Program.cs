@@ -24,8 +24,14 @@ namespace lesson1608
             }
 
             RangeOfArray array = new RangeOfArray(start, end);
-            array[]
+            
+            for(int i = start; i <= end; i++)
+            {
+                array[i] = 5;
+                Console.WriteLine("array[{0}] - {1}", i, array[i]);
+            }
 
+            Console.ReadLine();
         }
     }
 }
